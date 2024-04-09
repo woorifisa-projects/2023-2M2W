@@ -122,4 +122,35 @@ const emits = defineEmits(['click']);
 
   text-align: right;
 }
+
+img {
+  object-fit: cover;
+}
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    width: 200px;
+    height: 300px;
+  }
+  .card > .img {
+    width: 180px;
+    height: 200px;
+  }
+  .card > .img > img {
+    width: 180px;
+    height: 200px;
+  }
+  .detail {
+    font-size: 10px;
+  }
+  .detail .title {
+    font-size: 16px;
+    width: 100%;
+  }
+  .detail > .address {
+    font-size: 14px;
+  }
+}
 </style>

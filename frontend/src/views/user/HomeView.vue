@@ -241,13 +241,16 @@ onUnmounted(() => {
     padding: 0;
   }
   .card-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    padding: 0;
+    gap: 1px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .card-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    padding: 0;
   }
   .search {
     padding: 0 12px;

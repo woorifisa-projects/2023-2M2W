@@ -4,7 +4,10 @@
       <img src="@/assets/images/logo.png" alt="로고" />
     </div>
     <div class="wrap">
-      <div>
+      <div class="about btn">
+        <button name="소개페이지 이동 버튼" id="about" @click="goPage('/about')">소개</button>
+      </div>
+      <div class="sell btn">
         <button name="판매하기 버튼" id="profile" @click="goPage(HEADER.SELL.path)">
           {{ HEADER.SELL.title }}
         </button>
@@ -218,15 +221,20 @@ onMounted(async () => {
   gap: 20px;
   font-weight: 300;
 }
-
 .wrap > div > button {
-  background-color: transparent;
-  font-size: 16px;
   font-family: 'LINESeedKR-Bd';
+  background-color: transparent;
+}
+.about > button {
+  font-size: 14px;
+  color: rgb(117, 117, 117);
+}
+.sell > button {
+  font-size: 16px;
   color: var(--color-yellow);
   transition: color 0.3s ease;
 }
-.wrap > div > button:hover {
+.sell > button:hover {
   color: var(--color-blue);
 }
 
@@ -341,8 +349,26 @@ onMounted(async () => {
   .popover {
     right: 10px;
   }
+  .btn {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .header {
+    padding: 0;
+  }
+  .title img {
+    width: 170px;
+    object-fit: contain;
+  }
+  .profile {
+    width: 35px;
+    height: 35px;
+  }
+  .profile > img {
+    width: 35px;
+    height: 35px;
+  }
 }
 </style>
